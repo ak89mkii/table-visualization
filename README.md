@@ -31,5 +31,8 @@ https://trello.com/b/7bfE2IxS/gauged-solutions-option-2
 #### Information References:
 // 
 #### Images References / Credits:
+// https://www.w3schools.com/howto/howto_css_switch.asp
+// https://thenounproject.com/icon/dark-mode-4300955/
+// https://thenounproject.com/icon/brightness-4140598/
 #### Sounds References / Credits:
 #### Fonts / Credits:

@@ -12,7 +12,7 @@ class Table extends Component {
         return (
             <div className="tableText">
                 <Container>
-
+                    
                 </Container>
             </div>
         )
