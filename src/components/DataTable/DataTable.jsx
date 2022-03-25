@@ -1,41 +1,47 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { Table, Container, Row, Col, Image, Form, FormControl, Button } from 'react-bootstrap';
 import '../../App.css';
+import BarData from '../BarData/BarData'
 
 const DataTable = (props) => {
+    //Default data for table.
+    const data = [
+        {"name": "Kona", "quantity": 5, "date": "none"},
+        {"name": "Columbian", "quantity": 3, "date": "none"},
+        {"name": "Peruvian", "quantity": 7, "date": "none"},
+        {"name": "Vietnamese Weasel", "quantity": 10, "date": "none"},
+        {"name": "Armericano", "quantity": 2, "date": "none"},
+    ]
+    // Hooks: sets state with "data" as "infos".
+    const [infos, setInfos] = useState(data);
+
     return (
         <div>
             <Container>
+                {/* Sets table type between "dark" and "" from "tableMode" props, controlled by "Toggle" */}
                 <Table variant={props.tableMode} striped bordered hover>
                     <thead>
                         <tr>
-                        <th>#</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Username</th>
+                        <th>Coffee Type</th>
+                        <th>Quantity</th>
+                        <th>Date</th>
                         </tr>
                     </thead>
                     <tbody>
+                        {/* Maps table data, "infos" state to table with "info" currentValue. */}
+                        {infos.map((info) => (
                         <tr>
-                        <td>1</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
+                        <td>{info.name}</td>
+                        <td>{info.quantity}</td>
+                        <td>{info.date}</td>
                         </tr>
-                        <tr>
-                        <td>2</td>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                        </tr>
-                        <tr>
-                        <td>3</td>
-                        <td colSpan={2}>Larry the Bird</td>
-                        <td>@twitter</td>
-                        </tr>
+                        ))}
                     </tbody>
                 </Table>
             </Container>
+            <BarData 
+                infos={infos}
+            />
         </div>
     )
 }
