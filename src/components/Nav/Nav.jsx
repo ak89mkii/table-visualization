@@ -6,7 +6,7 @@ import Toggle from '../Toggle/Toggle.jsx';
 
 const Nav = (props) => {
     return (
-        <Navbar bg="dark" variant="dark">
+        <Navbar bg="primary" variant="dark">
             <Navbar.Brand>
                 <div className="d-inline-block align-center">
                 <img
