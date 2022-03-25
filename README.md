@@ -6,8 +6,8 @@ React app table visualizations.
 ## Screenshots:
 
 
-## Wireframe:
-
+## Trello Board:
+https://trello.com/b/7bfE2IxS/gauged-solutions-option-2
 
 ## Technologies Used:
 #### Front-End:
@@ -23,7 +23,7 @@ React app table visualizations.
 
 ## Resources and References:
 #### Development Environment:
-// npx create-react-app my-app
+// https://reactjs.org/docs/create-a-new-react-app.html
 // https://www.npmjs.com/package/react-minimal-pie-chart
 // https://www.npmjs.com/package/chart.js
 #### Information References:
