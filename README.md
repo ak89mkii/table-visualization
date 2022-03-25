@@ -11,8 +11,8 @@ https://trello.com/b/7bfE2IxS/gauged-solutions-option-2
 
 ## Technologies Used:
 #### Front-End:
-- HTML
-- CSS
+- HTML5
+- CSS3
 - React.js
 - Bootstrap
 #### Version Control:
