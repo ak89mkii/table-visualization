@@ -5,6 +5,10 @@ React app table visualizations.
 
 ## Screenshots:
 
+
+## Wireframe:
+
+
 ## Technologies Used:
 #### Front-End:
 - HTML
@@ -19,10 +23,11 @@ React app table visualizations.
 
 ## Resources and References:
 #### Development Environment:
-
+// npx create-react-app my-app
+// https://www.npmjs.com/package/react-minimal-pie-chart
+// https://www.npmjs.com/package/chart.js
 #### Information References:
 // 
 #### Images References / Credits:
 #### Sounds References / Credits:
 #### Fonts / Credits:
-// https://fonts.google.com/specimen/Nunito
