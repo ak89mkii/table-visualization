@@ -1,7 +1,7 @@
 import React, { Component, createRef } from 'react'
 import '../../App.css'
 import { Navbar, Container, Row, Col, Image, Form, FormControl, Button } from 'react-bootstrap';
-import logo from '../../Img/01.png';
+import logo from '../../Img/logo.png';
 import Toggle from '../Toggle/Toggle.jsx';
 
 const Nav = (props) => {
@@ -9,13 +9,11 @@ const Nav = (props) => {
         <Navbar bg="dark" variant="dark">
             <Navbar.Brand>
                 <div className="d-inline-block align-center">
-                {/* <Link to="/"> */}
                 <img
-                    alt=""
-                    src={logo}
+                    alt={logo}
+                    src="https://cdn.iconscout.com/icon/free/png-256/react-1-282599.png"
                     className="logo"
                 />            
-                {/* </Link> */}
                 {' '}
                 </div>
             </Navbar.Brand>

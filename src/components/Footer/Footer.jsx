@@ -12,7 +12,7 @@ class Footer extends Component {
                 <div class="container">
                     <div class='row'>
                         <div class="col">
-                            © 2017 - 2022 Sholodex | Ponder Enterprises LLC 
+                            © 2022 Table Visualization App | Ponder Code
                         </div>
                     </div>
                 </div>

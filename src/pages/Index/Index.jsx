@@ -2,7 +2,9 @@ import React, { Component, createRef } from 'react'
 import '../../App.css'
 import Nav from '../../components/Nav/Nav'
 import S1 from '../../components/S1/S1'
-// import Calculator from '../../components/Calculator/Calculator'
+// import Table from '../../components/Table/Table'
+// import Bar from '../../components/Bar/Bar'
+// import Pie from '../../components/Pie/Pie'
 import Footer from '../../components/Footer/Footer'
 import sun from '../../Img/sun.png'
 import moon from '../../Img/moon.png'
@@ -16,6 +18,7 @@ class Home extends Component {
         icon: moon,
     }
 
+    // Function Toggle Dark/Light Mode: Changes CSS classes and icon when called.
     toggleMode = () => {
         if (this.state.mode == 'light') {
             this.setState({
@@ -46,7 +49,7 @@ class Home extends Component {
                     toggleMode={this.toggleMode}
                 />
                 <S1 />
-                {/* <Calculator /> */}
+                {/* <Table /> */}
                 <Footer />
             </div>
         )
