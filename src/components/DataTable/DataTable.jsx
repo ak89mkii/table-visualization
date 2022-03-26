@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Table, Container, Row, Col, Image, Form, FormControl, Button } from 'react-bootstrap';
+import { Table, Container, Row, Col, Form, Button } from 'react-bootstrap';
 import '../../App.css';
 import BarData from '../BarData/BarData'
 
@@ -82,30 +82,40 @@ const DataTable = (props) => {
             {/* Form Component */}
             <Container>
                 <h5>Add a New Coffee</h5>
-                    <form onSubmit={handleAddFormSubmit}>
-                        <input
-                            type='text'
-                            name='name'
-                            required='required'
-                            placeholder='Enter a coffee type...'
-                            onChange={handleFormChange}
-                        />
-                        <input
-                            type='text'
-                            name='quantity'
-                            required='required'
-                            placeholder='Enter an amount...'
-                            onChange={handleFormChange}
-                        />
-                        <input
-                            type='text'
-                            name='date'
-                            required='required'
-                            placeholder='Enter a date...'
-                            onChange={handleFormChange}
-                        />
-                        <button type='submit'>Add</button>
-                    </form>
+                    <Form onSubmit={handleAddFormSubmit}>
+                        <Row>
+                            <Col>
+                                <Form.Control
+                                    type='text'
+                                    name='name'
+                                    required='required'
+                                    placeholder='Enter a coffee type...'
+                                    onChange={handleFormChange}
+                                />
+                            </Col>
+                            <Col>
+                                <Form.Control
+                                    type='text'
+                                    name='quantity'
+                                    required='required'
+                                    placeholder='Enter an amount...'
+                                    onChange={handleFormChange}
+                                />
+                            </Col>
+                            <Col>
+                                <Form.Control
+                                    type='text'
+                                    name='date'
+                                    required='required'
+                                    placeholder='Enter a date...'
+                                    onChange={handleFormChange}
+                                />
+                            </Col>
+                            <Col>
+                                <Button type='submit'>Add to Table</Button>
+                            </Col>
+                        </Row>
+                    </Form>
             </Container>
             <br></br>
             {/* Bar Chart Component */}
