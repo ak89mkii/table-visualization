@@ -7,7 +7,7 @@ const LineData = (props) => {
     return (
         <div>
             <Container>
-                <h5>Line Chart</h5>
+                <h5>Line Chart: Coffee Stock | Sold</h5>
                 <LineChart width={1000} height={600} data={props.infos} margin={{ top: 5, right: 20, left: 10, bottom: 5 }}>
                 <XAxis dataKey="name" />
                 <YAxis />
