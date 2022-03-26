@@ -5,13 +5,13 @@ import BarData from '../BarData/BarData'
 import PieData from '../PieData/PieData'
 
 const DataTable = (props) => {
-    //STarting data for table.
+    //Srarting data for table.
     const data = [
-        {"name": "Kona", "quantity": 5, "date": "none"},
-        {"name": "Columbian", "quantity": 3, "date": "none"},
-        {"name": "Peruvian", "quantity": 7, "date": "none"},
-        {"name": "Vietnamese Weasel", "quantity": 10, "date": "none"},
-        {"name": "Armericano", "quantity": 2, "date": "none"},
+        {"name": "Kona", "stock": 1000, "sold": 343},
+        {"name": "Columbian", "stock": 117, "sold": 20},
+        {"name": "Peruvian", "stock": 343, "sold": 91},
+        {"name": "Vietnamese Weasel", "stock": 200, "sold": 117},
+        {"name": "Armericano", "stock": 500, "sold": 50},
     ]
 
     // Hooks Table State: Sets state with "data" as "infos".
@@ -19,8 +19,8 @@ const DataTable = (props) => {
     // Hooks Form State: Sets state of form inputs to empty strings.
     const [addFormDatas, setAddFormDatas] = useState({
         name: '',
-        quantity: '',
-        date: ''
+        stock: '',
+        sold: ''
     });
 
     // Function Add Form Data to State: Sets state of "addFormDatas" to form input values.
@@ -47,8 +47,8 @@ const DataTable = (props) => {
 
         const newInfo = {
             name: addFormDatas.name,
-            quantity: addFormDatas.quantity,
-            date: addFormDatas.date
+            stock: addFormDatas.stock,
+            sold: addFormDatas.sold
         };
 
         const newInfos = [...infos, newInfo];
@@ -63,8 +63,8 @@ const DataTable = (props) => {
                     <thead>
                         <tr>
                         <th>Coffee Type</th>
-                        <th>Quantity</th>
-                        <th>Date</th>
+                        <th>Quantity in Stock</th>
+                        <th>Quantity Sold</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -72,8 +72,8 @@ const DataTable = (props) => {
                         {infos.map((info) => (
                         <tr>
                         <td>{info.name}</td>
-                        <td>{info.quantity}</td>
-                        <td>{info.date}</td>
+                        <td>{info.stock}</td>
+                        <td>{info.sold}</td>
                         </tr>
                         ))}
                     </tbody>
@@ -98,18 +98,18 @@ const DataTable = (props) => {
                             <Col>
                                 <Form.Control
                                     type='text'
-                                    name='quantity'
+                                    name='stock'
                                     required='required'
-                                    placeholder='Enter an amount...'
+                                    placeholder='Enter an quantity...'
                                     onChange={handleFormChange}
                                 />
                             </Col>
                             <Col>
                                 <Form.Control
                                     type='text'
-                                    name='date'
+                                    name='sold'
                                     required='required'
-                                    placeholder='Enter a date...'
+                                    placeholder='Enter amout sold...'
                                     onChange={handleFormChange}
                                 />
                             </Col>

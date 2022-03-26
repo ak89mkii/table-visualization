@@ -1,18 +1,25 @@
 import React, { useState } from 'react';
 import { Table, Container, Row, Col, Image, Form, FormControl, Button } from 'react-bootstrap';
 import '../../App.css';
+import { BarChart, Bar, CartesianGrid, XAxis, YAxis, Tooltip, Legend  } from 'recharts';
 
-const BarData = (props) => {
+const PieData = (props) => {
     return (
         <div>
             <Container>
-                <h5>BarData</h5>
-                {props.infos.map((info) => (
-                    <p>{info.name}</p>
-                ))}
+                <h5>Bar Graph: Coffee Stock | Sold</h5>
+                <BarChart width={1000} height={600} data={props.infos}>
+                    <CartesianGrid stroke="#ccc" />
+                    <XAxis dataKey="name" />
+                    <YAxis />
+                    <Tooltip />
+                    <Legend />
+                    <Bar dataKey="stock" fill="orange" />
+                    <Bar dataKey="sold" fill="#0047ab" />
+                </BarChart>
             </Container>
         </div>
     )
 }
 
-export default BarData;
+export default PieData;
