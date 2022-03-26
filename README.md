@@ -4,7 +4,8 @@
 React app table visualizations.
 
 ## Screenshots:
-
+![alt text](src/Img/01.png)
+![alt text](src/Img/02.png)
 
 ## Trello Board:
 https://trello.com/b/7bfE2IxS/gauged-solutions-option-2
