@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Table, Container, Row, Col, Form, Button } from 'react-bootstrap';
 import '../../App.css';
 import BarData from '../BarData/BarData'
-import PieData from '../PieData/PieData'
+import PieData from '../LineData/LineData'
 
 const DataTable = (props) => {
     //Srarting data for table.
@@ -100,7 +100,7 @@ const DataTable = (props) => {
                                     type='text'
                                     name='stock'
                                     required='required'
-                                    placeholder='Enter an quantity...'
+                                    placeholder='Enter a quantity...'
                                     onChange={handleFormChange}
                                 />
                             </Col>
