@@ -13,17 +13,28 @@ const DataTable = (props) => {
         {"name": "Vietnamese Weasel", "quantity": 10, "date": "none"},
         {"name": "Armericano", "quantity": 2, "date": "none"},
     ]
+
     // Hooks: sets state with "data" as "infos".
     const [infos, setInfos] = useState(data);
     // Hooks: 
-    const [infos, setInfos] = useState(data);
+    const [addFormDatas, setAddFormDatas] = useState({
+        name: '',
+        quantity: '',
+        date: ''
+    });
+
     // Function Add Form Data to Table: 
-    handleFormChange =  (event) => {
+    const handleFormChange = (event) => {
         event.preventDefault();
 
         const fieldName = event.target.getAttribute('name');
+        const fieldValue = event.target.value;
+
+        const newFormData = {...addFormDatas };
+        newFormData[fieldName] = fieldValue;
         
-    }
+        setAddFormDatas(newFormData);
+    };
 
     return (
         <div>
@@ -49,8 +60,12 @@ const DataTable = (props) => {
                     </tbody>
                 </Table>
             </Container>
+            <br></br>
             {/* Form Component */}
-            <AddForm />
+            <AddForm 
+                handleFormChange={handleFormChange}
+            />
+            <br></br>
             {/* Bar Chart Component */}
             <BarData 
                 infos={infos}

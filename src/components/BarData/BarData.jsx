@@ -6,6 +6,7 @@ const BarData = (props) => {
     return (
         <div>
             <Container>
+                <h5>Graph</h5>
                 {props.infos.map((info) => (
                     <p>{info.name}</p>
                 ))}
