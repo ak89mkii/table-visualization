@@ -1,6 +1,6 @@
 # Gauged Solutions: Option 2
 
-## Description:able visualizations.
+## Description:
 React app table visualizations.
 
 ## Screenshots:
