@@ -5,7 +5,7 @@ import BarData from '../BarData/BarData'
 import PieData from '../PieData/PieData'
 
 const DataTable = (props) => {
-    //Default data for table.
+    //STarting data for table.
     const data = [
         {"name": "Kona", "quantity": 5, "date": "none"},
         {"name": "Columbian", "quantity": 3, "date": "none"},
@@ -14,9 +14,9 @@ const DataTable = (props) => {
         {"name": "Armericano", "quantity": 2, "date": "none"},
     ]
 
-    // Hooks: Sets state with "data" as "infos".
+    // Hooks Table State: Sets state with "data" as "infos".
     const [infos, setInfos] = useState(data);
-    // Hooks: Sets state of form inputs to empty strings.
+    // Hooks Form State: Sets state of form inputs to empty strings.
     const [addFormDatas, setAddFormDatas] = useState({
         name: '',
         quantity: '',
@@ -41,7 +41,7 @@ const DataTable = (props) => {
         setAddFormDatas(newFormData);
     };
 
-    // Function 
+    // Function Add Form Data to Table's State: After submit, adds form data to table state.
     const handleAddFormSubmit = (event) => {
         event.preventDefault();
 
