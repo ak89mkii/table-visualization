@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Table, Container, Row, Col, Form, Button } from 'react-bootstrap';
 import '../../App.css';
 import BarData from '../BarData/BarData'
+import PieData from '../PieData/PieData'
 
 const DataTable = (props) => {
     //Default data for table.
@@ -79,6 +80,7 @@ const DataTable = (props) => {
                 </Table>
             </Container>
             <br></br>
+            <br></br>
             {/* Form Component */}
             <Container>
                 <h5>Add a New Coffee</h5>
@@ -118,10 +120,18 @@ const DataTable = (props) => {
                     </Form>
             </Container>
             <br></br>
+            <br></br>
             {/* Bar Chart Component */}
             <BarData 
                 infos={infos}
             />
+            <br></br>
+            <br></br>
+            <PieData 
+                infos={infos}
+            />
+            <br></br>
+            <br></br>
         </div>
     )
 }
