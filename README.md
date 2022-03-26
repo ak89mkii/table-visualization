@@ -5,6 +5,7 @@ React app table visualizations.
 
 ## Screenshots:
 ![alt text](src/Img/02.png)
+#### Wireframe:
 ![alt text](src/Img/01.png)
 
 ## Trello Board:
