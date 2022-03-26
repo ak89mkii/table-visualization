@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Table, Container, Row, Col, Image, Form, FormControl, Button } from 'react-bootstrap';
 import '../../App.css';
+import AddForm from '../AddForm/AddForm'
 import BarData from '../BarData/BarData'
 
 const DataTable = (props) => {
@@ -14,6 +15,15 @@ const DataTable = (props) => {
     ]
     // Hooks: sets state with "data" as "infos".
     const [infos, setInfos] = useState(data);
+    // Hooks: 
+    const [infos, setInfos] = useState(data);
+    // Function Add Form Data to Table: 
+    handleFormChange =  (event) => {
+        event.preventDefault();
+
+        const fieldName = event.target.getAttribute('name');
+        
+    }
 
     return (
         <div>
@@ -39,6 +49,9 @@ const DataTable = (props) => {
                     </tbody>
                 </Table>
             </Container>
+            {/* Form Component */}
+            <AddForm />
+            {/* Bar Chart Component */}
             <BarData 
                 infos={infos}
             />

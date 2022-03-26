@@ -3,16 +3,13 @@ import '../../App.css'
 import Nav from '../../components/Nav/Nav'
 import S1 from '../../components/S1/S1'
 import DataTable from '../../components/DataTable/DataTable'
-// import Bar from '../../components/Bar/Bar'
-// import Pie from '../../components/Pie/Pie'
 import Footer from '../../components/Footer/Footer'
 import sun from '../../Img/sun.png'
 import moon from '../../Img/moon.png'
 
-
 class Home extends Component {
+    // State of dark/light mode and "Toggle" icon.
     state = {
-        open: false,
         mode: 'dark',
         mode2: 'darkNoText',
         tableMode:'dark',
@@ -51,6 +48,7 @@ class Home extends Component {
                     icon={this.state.icon}
                     toggleMode={this.toggleMode}
                 />
+                <br></br>
                 <S1 />
                 <DataTable                  
                    tableMode={this.state.tableMode}
