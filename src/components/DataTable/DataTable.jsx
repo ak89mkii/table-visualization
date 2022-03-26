@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Table, Container, Row, Col, Image, Form, FormControl, Button } from 'react-bootstrap';
 import '../../App.css';
-import AddForm from '../AddForm/AddForm'
 import BarData from '../BarData/BarData'
 
 const DataTable = (props) => {
@@ -14,27 +13,46 @@ const DataTable = (props) => {
         {"name": "Armericano", "quantity": 2, "date": "none"},
     ]
 
-    // Hooks: sets state with "data" as "infos".
+    // Hooks: Sets state with "data" as "infos".
     const [infos, setInfos] = useState(data);
-    // Hooks: 
+    // Hooks: Sets state of form inputs to empty strings.
     const [addFormDatas, setAddFormDatas] = useState({
         name: '',
         quantity: '',
         date: ''
     });
 
-    // Function Add Form Data to Table: 
+    // Function Add Form Data to State: Sets state of "addFormDatas" to form input values.
     const handleFormChange = (event) => {
         event.preventDefault();
 
+        // Gets name attribute of changed form input.
         const fieldName = event.target.getAttribute('name');
+        // Gets the value of the changed form input.
         const fieldValue = event.target.value;
 
-        const newFormData = {...addFormDatas };
+        // Copies form data without mutating state.
+        const newFormData = {...addFormDatas};
+        // Update "newFormData" with what is typed in form input.
         newFormData[fieldName] = fieldValue;
         
+        // Sets "newFormData" to state.
         setAddFormDatas(newFormData);
     };
+
+    // Function 
+    const handleAddFormSubmit = (event) => {
+        event.preventDefault();
+
+        const newInfo = {
+            name: addFormDatas.name,
+            quantity: addFormDatas.quantity,
+            date: addFormDatas.date
+        };
+
+        const newInfos = [...infos, newInfo];
+        setInfos(newInfos)
+    }
 
     return (
         <div>
@@ -62,9 +80,36 @@ const DataTable = (props) => {
             </Container>
             <br></br>
             {/* Form Component */}
-            <AddForm 
-                handleFormChange={handleFormChange}
-            />
+            <Container>
+                {/* {props.infos.map((info) => ( */}
+                {/* {info.name} */}
+                <h5>Add a New Coffee</h5>
+                    <form onSubmit={handleAddFormSubmit}>
+                        <input
+                            type='text'
+                            name='name'
+                            required='required'
+                            placeholder='Enter a coffee type...'
+                            onChange={handleFormChange}
+                        />
+                        <input
+                            type='text'
+                            name='quantity'
+                            required='required'
+                            placeholder='Enter an amount...'
+                            onChange={handleFormChange}
+                        />
+                        <input
+                            type='text'
+                            name='date'
+                            required='required'
+                            placeholder='Enter a date...'
+                            onChange={handleFormChange}
+                        />
+                        <button type='submit'>Add</button>
+                    </form>
+                {/* ))} */}
+            </Container>
             <br></br>
             {/* Bar Chart Component */}
             <BarData 
