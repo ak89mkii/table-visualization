@@ -81,8 +81,6 @@ const DataTable = (props) => {
             <br></br>
             {/* Form Component */}
             <Container>
-                {/* {props.infos.map((info) => ( */}
-                {/* {info.name} */}
                 <h5>Add a New Coffee</h5>
                     <form onSubmit={handleAddFormSubmit}>
                         <input
@@ -108,7 +106,6 @@ const DataTable = (props) => {
                         />
                         <button type='submit'>Add</button>
                     </form>
-                {/* ))} */}
             </Container>
             <br></br>
             {/* Bar Chart Component */}
