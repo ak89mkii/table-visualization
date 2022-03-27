@@ -10,7 +10,7 @@ const DataTable = (props) => {
         {"name": "Kona", "stock": 1000, "sold": 343},
         {"name": "Columbian", "stock": 117, "sold": 20},
         {"name": "Peruvian", "stock": 343, "sold": 91},
-        {"name": "Vietnamese Weasel", "stock": 200, "sold": 117},
+        {"name": "Weasel", "stock": 200, "sold": 117},
         {"name": "Armericano", "stock": 500, "sold": 50},
     ]
 
