@@ -21,6 +21,7 @@ https://trello.com/b/7bfE2IxS/gauged-solutions-option-2
 - React.js
 - Bootstrap
 - Recharts (npm)
+- Surge
 #### Version Control:
 - Git
 - GitHub

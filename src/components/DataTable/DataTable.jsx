@@ -27,17 +27,12 @@ const DataTable = (props) => {
     const handleFormChange = (event) => {
         event.preventDefault();
 
-        // Gets name attribute of changed form input.
         const fieldName = event.target.getAttribute('name');
-        // Gets the value of the changed form input.
         const fieldValue = event.target.value;
 
-        // Copies form data without mutating state.
         const newFormData = {...addFormDatas};
-        // Update "newFormData" with what is typed in form input.
         newFormData[fieldName] = fieldValue;
         
-        // Sets "newFormData" to state.
         setAddFormDatas(newFormData);
     };
 
