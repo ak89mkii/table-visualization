@@ -1,6 +1,6 @@
-import React, { Component, createRef } from 'react'
-import '../../App.css'
-import { Navbar, Container, Row, Col, Image, Form, FormControl, Button } from 'react-bootstrap';
+import React from 'react';
+import '../../App.css';
+import { Navbar } from 'react-bootstrap';
 import logo from '../../Img/logo.png';
 import Toggle from '../Toggle/Toggle.jsx';
 

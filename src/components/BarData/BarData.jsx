@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Table, Container, Row, Col, Image, Form, FormControl, Button } from 'react-bootstrap';
+import React from 'react';
+import { Container } from 'react-bootstrap';
 import '../../App.css';
 import { BarChart, Bar, CartesianGrid, XAxis, YAxis, Tooltip, Legend  } from 'recharts';
 

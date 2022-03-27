@@ -1,4 +1,4 @@
-import React, { Component, createRef } from 'react'
+import React, { Component } from 'react'
 import '../../App.css'
 import Nav from '../../components/Nav/Nav'
 import S1 from '../../components/S1/S1'
@@ -33,10 +33,6 @@ class Home extends Component {
                 icon: sun,
             })
         }
-    }
-
-    refreshPage = () => {
-        setTimeout(function () { window.location.reload(); }, 10)
     }
 
     render() {

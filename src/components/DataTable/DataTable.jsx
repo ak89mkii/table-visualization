@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Table, Container, Row, Col, Form, Button } from 'react-bootstrap';
 import '../../App.css';
 import BarData from '../BarData/BarData'
-import PieData from '../LineData/LineData'
+import LineData from '../LineData/LineData'
 
 const DataTable = (props) => {
     //Srarting data for table.
@@ -121,13 +121,14 @@ const DataTable = (props) => {
             </Container>
             <br></br>
             <br></br>
-            {/* Bar Chart Component */}
+            {/* Bar Graph Component */}
             <BarData 
                 infos={infos}
             />
             <br></br>
             <br></br>
-            <PieData 
+            {/* Line Chart Component */}
+            <LineData 
                 infos={infos}
             />
             <br></br>

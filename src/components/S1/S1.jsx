@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Navbar, Container, Row, Col, Image, Form, FormControl, Button } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import '../../App.css';
 
 class S1 extends Component {
