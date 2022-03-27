@@ -3,6 +3,9 @@
 ## Description:
 React app table visualizations.
 
+## Deployment Link:
+https://data-graph-ig.surge.sh/
+
 ## Screenshots:
 ![alt text](src/Img/02.png)
 #### Wireframe:
