@@ -48,6 +48,7 @@ const DataTable = (props) => {
 
         const newInfos = [...infos, newInfo];
         setInfos(newInfos)
+        document.getElementById("test").reset();
     }
 
     return (
@@ -79,7 +80,7 @@ const DataTable = (props) => {
             {/* Form Component */}
             <Container>
                 <h5>Add a New Coffee</h5>
-                    <Form onSubmit={handleAddFormSubmit}>
+                    <Form id='test' onSubmit={handleAddFormSubmit}>
                         <Row>
                             <Col>
                                 <Form.Control
