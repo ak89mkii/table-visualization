@@ -38,6 +38,7 @@ https://trello.com/b/7bfE2IxS/gauged-solutions-option-2
 // https://www.npmjs.com/package/recharts
 #### Information References:
 // https://recharts.org/en-US/api/LineChart#### 
+// https://stackoverflow.com/questions/38486660/how-to-add-a-classname-id-to-react-bootstrap-component
 #### Images References / Credits:
 // https://www.w3schools.com/howto/howto_css_switch.asp
 // https://thenounproject.com/icon/dark-mode-4300955/
